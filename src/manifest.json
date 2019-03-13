@@ -1,9 +1,11 @@
 {
+  "name": "Adjust Multibyte Frame",
   "compatibleVersion": 3,
   "bundleVersion": 1,
+  "icon": "icon.png",
   "commands": [
     {
-      "name": "Adjust",
+      "name": "Adjust Selected Texts",
       "identifier": "adjust-multibyte-frame-adjust",
       "script": "./main.js"
     }
@@ -13,5 +15,7 @@
     "items": [
       "adjust-multibyte-frame-adjust"
     ]
-  }
+  },
+  "version": "0.1.0",
+  "author": "manse"
 }

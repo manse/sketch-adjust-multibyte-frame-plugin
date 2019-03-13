@@ -9,7 +9,7 @@
     "manifest": "src/manifest.json",
     "main": "sketch-adjust-multibyte-frame-plugin.sketchplugin",
     "assets": [
-      "assets/**/*"
+      "assets/**/*.png"
     ]
   },
   "scripts": {
@@ -30,5 +30,6 @@
   "dependencies": {
     "sketch-module-web-view": "^2.1.5"
   },
-  "author": "manse <info@manse.jp>"
+  "author": "manse <info@manse.jp>",
+  "license": "MIT"
 }
