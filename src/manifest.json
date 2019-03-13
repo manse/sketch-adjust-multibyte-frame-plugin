@@ -1,0 +1,17 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "Adjust",
+      "identifier": "adjust-multibyte-frame-adjust",
+      "script": "./main.js"
+    }
+  ],
+  "menu": {
+    "title": "Adjust Multibyte Frame",
+    "items": [
+      "adjust-multibyte-frame-adjust"
+    ]
+  }
+}
