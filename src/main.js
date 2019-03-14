@@ -21,13 +21,17 @@ export default function() {
       layer.style.lineHeight * Math.max(0, layer.fragments.length - 1);
     layer.style.verticalAlignment = 'center';
     layer.frame.scale(1, toHeight / layer.frame.height);
-    if (layer.parent && layer.parent.type === 'Group') {
-      layer.parent.adjustToFit();
-    }
     affectedLayers.push(layer);
   });
   traverse(document.selectedLayers, layer => (layer.selected = false));
-  affectedLayers.forEach(layer => (layer.selected = true));
+  affectedLayers.forEach(layer => {
+    let cursor = layer.parent;
+    while (cursor.type === 'Group') {
+      cursor.adjustToFit();
+      cursor = cursor.parent;
+    }
+    layer.selected = true;
+  });
 
   // const browserWindow = new BrowserWindow({
   //   identifier: 'adjust-multibyte-frame',
